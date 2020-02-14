@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
 const Login = props => {
   const [credentials, setCredentials] = useState({ username: "", password: "" })
@@ -32,13 +33,21 @@ const Login = props => {
 
   return (
     <>
-      {isLoading ? (<h2>Loading...</h2>) : (
-        <form onSubmit={handleLogin}>
-          <input type="text" name="username" value={credentials.username} onChange={handleChange} required />
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">Submit</button>
-        </form>
-      )}
+      {isLoading ? (
+        <Loader
+          type="ThreeDots"
+          color="salmon"
+          height={100}
+          width={100}
+          timeout={3000} />
+      )
+        : (
+          <form onSubmit={handleLogin}>
+            <input type="text" name="username" value={credentials.username} onChange={handleChange} required />
+            <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+            <button type="submit">Submit</button>
+          </form>
+        )}
     </>
   )
 }

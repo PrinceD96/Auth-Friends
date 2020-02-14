@@ -12,11 +12,11 @@ function App() {
         <header>
           <ul>
             <li><Link to="/login">Login</Link></li>
-            <li><Link to="/profile">Home</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
           </ul>
         </header>
         <Switch>
-          <Route path="/login" component={Login} />
+          <Route exact path="/login" component={Login} />
           <PrivateRoute path="/profile" component={Profile} />
         </Switch>
       </div>
