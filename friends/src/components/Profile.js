@@ -1,9 +1,11 @@
 import React from "react";
+import FriendsList from "./FriendsList";
 
 const Profile = () => {
   return (
     <>
-      <div>Welcome Back!</div>
+      <h2>Welcome Back!</h2>
+      <FriendsList />
     </>
   )
 }
