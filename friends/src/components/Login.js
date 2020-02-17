@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
+import { Segment, Form, Input, Button } from "semantic-ui-react";
 
 const Login = props => {
   const [credentials, setCredentials] = useState({ username: "", password: "" })
@@ -32,7 +33,7 @@ const Login = props => {
   }
 
   return (
-    <>
+    <div className="login__form__container">
       {isLoading ? (
         <Loader
           type="ThreeDots"
@@ -42,13 +43,18 @@ const Login = props => {
           timeout={3000} />
       )
         : (
-          <form onSubmit={handleLogin}>
-            <input type="text" name="username" value={credentials.username} onChange={handleChange} required />
-            <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-            <button type="submit">Submit</button>
-          </form>
+          <>
+            <h2>Login</h2>
+            <Segment>
+              <Form onSubmit={handleLogin} className="login__form">
+                <Input type="text" name="username" value={credentials.username} onChange={handleChange} placeholder="Username" required />
+                <Input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password" required />
+                <Button type="submit">Submit</Button>
+              </Form>
+            </Segment>
+          </>
         )}
-    </>
+    </div>
   )
 }
 

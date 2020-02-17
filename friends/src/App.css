@@ -9,7 +9,7 @@ header {
   border: 2px solid salmon;
   background-color: salmon;
   margin-bottom: 100px;
-  top: 0;
+  
 }
 
 ul {
@@ -25,4 +25,19 @@ li {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+.login__form__container {
+  /* border: 2px solid royalblue; */
+ width: 250px;
+ margin: 0 auto;
+ 
+}
+
+.login__form {
+  height: 250px;
+ display: flex;
+ flex-flow: column wrap;
+ justify-content: space-evenly;
+ align-items: center;
 }
