@@ -17,6 +17,16 @@ const FriendsList = props => {
   }, [])
 
 
+  const deleteFriend = id => {
+    axiosWithAuth()
+      .delete(`http://localhost:5000/api/friends/${id}`)
+      .then(res => {
+        console.log(`Friend with ID ${id} deleted`, res)
+        setFriends(res.data)
+      })
+      .catch(error => console.log("Delete Friend Failure =>", error))
+  }
+
   return (
     <>
       <h2>Your Friends</h2>
@@ -31,10 +41,10 @@ const FriendsList = props => {
             </Card.Content>
             <Card.Content extra>
               <div className='ui two buttons'>
-                <Button basic color='green'>
+                <Button basic color='grey'>
                   Edit
           </Button>
-                <Button basic color='red'>
+                <Button basic color='red' onClick={() => deleteFriend(friend.id)}>
                   Delete
           </Button>
               </div>

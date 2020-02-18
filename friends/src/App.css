@@ -66,3 +66,26 @@ a:hover {
 .friend {
   text-align: left;
 }
+
+.addFriend__form__container {
+  /* border: 2px solid salmon; */
+  padding: 20px;
+  
+}
+
+.addFriend__form__container form {
+  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+/* .addFriend__form__container form button {
+  min-width: 200px;
+  
+} */
+
+.greeting {
+  margin-bottom: 50px;
+}

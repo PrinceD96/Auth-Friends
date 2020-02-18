@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { Form, Input, Button } from "semantic-ui-react";
 
 const AddFriend = () => {
   const [friend, setFriend] = useState({ name: "", age: "", email: "" })
@@ -27,14 +28,45 @@ const AddFriend = () => {
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="name" value={friend.name} onChange={handleChange} placeholder="Enter Name" required />
-        <input type="number" name="age" value={friend.age} onChange={handleChange} placeholder="Enter Age" required />
-        <input type="email" name="email" value={friend.email} onChange={handleChange} placeholder="Enter Email" required />
-        <button type="submit">Add Friend</button>
-      </form>
-    </>
+    <div className="addFriend__form__container">
+      <Form onSubmit={handleSubmit}>
+        <Form.Group widths="equal">
+          <Form.Field
+            id='form-input-control-name'
+            control={Input}
+
+            placeholder='Enter name'
+            name="name"
+            value={friend.name}
+            onChange={handleChange}
+          />
+          <Form.Field
+            id='form-input-control-age'
+            control={Input}
+            type="number"
+
+            placeholder='Enter age'
+            name="age"
+            value={friend.age}
+            onChange={handleChange}
+          />
+          <Form.Field
+            id='form-input-control-email'
+            control={Input}
+
+            placeholder='Enter email'
+            name="email"
+            value={friend.email}
+            onChange={handleChange}
+          />
+          <Form.Field
+            id='form-button-submit'
+            control={Button}
+            content='Add Friend'
+          />
+        </Form.Group>
+      </Form>
+    </div>
   )
 
 }
