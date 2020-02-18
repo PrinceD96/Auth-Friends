@@ -5,7 +5,7 @@ import FriendsList from "./FriendsList";
 const Profile = () => {
   return (
     <>
-      <h2>Welcome Back!</h2>
+      <h1>Welcome Back!</h1>
       <AddFriend />
       <FriendsList />
     </>

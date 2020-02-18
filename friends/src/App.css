@@ -20,11 +20,22 @@ ul {
 li {
   list-style: none;
   margin-right: 20px;  
+  
 }
 
 a {
   text-decoration: none;
   color: #fff;
+
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color:#fff;
+  border-bottom: 1px solid#fff;
 }
 
 .login__form__container {
@@ -40,4 +51,18 @@ a {
  flex-flow: column wrap;
  justify-content: space-evenly;
  align-items: center;
+}
+
+.friends__list {
+  /* border: 2px solid salmon; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 20px;
+  
+}
+
+.friend {
+  text-align: left;
 }
