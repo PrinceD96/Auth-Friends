@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+  /* margin-top: 100px; */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  border: 2px solid salmon;
+  background-color: salmon;
+  margin-bottom: 100px;
+  
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  list-style: none;
+  margin-right: 20px;  
+  
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color:#fff;
+  border-bottom: 1px solid#fff;
+}
+
+.login__form__container {
+  /* border: 2px solid royalblue; */
+ width: 250px;
+ margin: 0 auto;
+ 
+}
+
+.login__form {
+  height: 250px;
+ display: flex;
+ flex-flow: column wrap;
+ justify-content: space-evenly;
+ align-items: center;
+}
+
+.friends__list {
+  /* border: 2px solid salmon; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 20px;
+  
+}
+
+.friend {
+  text-align: left;
+}
+
+.addFriend__form__container {
+  /* border: 2px solid salmon; */
+  padding: 20px;
+  
+}
+
+.addFriend__form__container form {
+  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+/* .addFriend__form__container form button {
+  min-width: 200px;
+  
+} */
+
+.greeting {
+  margin-bottom: 50px;
+}
